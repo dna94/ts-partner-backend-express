@@ -13,7 +13,12 @@ export interface ssoDTO{
     projectCode: string,
     userInfo: {
         //rest of data omitted
+        firstName?: string;
+        lastName?: string;
         email: string;
-        credit: number
+        userId?: string;
+        ssn?: string;
+        phone?: string;
+        credit?: number;
     }
 }

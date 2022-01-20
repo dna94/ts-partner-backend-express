@@ -2,8 +2,14 @@ import http from 'http';
 import express, { Express } from 'express';
 import morgan from 'morgan';
 import routes from './routes/posts';
+const mongoose = require('mongoose');
 
 const router: Express = express();
+
+//connection mongodb
+const dbURI = 'mongodb+srv://test:test@ts-partner-db.swelt.mongodb.net/ts-partner-db?retryWrites=true&w=majority'
+mongoose.connect(dbURI);
+
 
 /** Logging */
 router.use(morgan('dev'));
